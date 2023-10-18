@@ -1,10 +1,10 @@
-import Postagem  from "./Postagem";
+import Produto  from "./Produto.ts";
 
 export default interface Usuario {
   id: number;
   nome: string;
   usuario: string;
-  foto: string;
   senha: string;
-  postagem?: Postagem | null;
+  foto: string;
+  produto?: Produto | null;
 }
