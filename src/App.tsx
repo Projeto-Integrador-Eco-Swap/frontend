@@ -22,6 +22,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
+              <Route path="/cadastrarTema" element = {<Home/>} />
             </Routes>
           </div>
           <Footer />
