@@ -4,9 +4,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Categoria from '../../../models/Categoria';
 import { atualizar, buscar, cadastrar } from '../../../services/Service';
+import { toastAlerta } from '../../../utils/toastAlert';
 
-function FormularioTema() {
-    const [tema, setTema] = useState<Categoria>({} as Categoria);
+function FormularioCategoria() {
+    const [categoria, setCategoria] = useState<Categoria>({} as Categoria);
 
     let navigate = useNavigate();
 
@@ -16,7 +17,7 @@ function FormularioTema() {
     const token = usuario.token;
 
     async function buscarPorId(id: string) {
-        await buscar(`/categorias/${id}`, setTema, {
+        await buscar(`/categorias/${id}`, setCategoria, {
             headers: {
                 Authorization: token,
             },
@@ -30,54 +31,54 @@ function FormularioTema() {
     }, [id])
 
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
-        setTema({
-            ...tema,
+        setCategoria({
+            ...categoria,
             [e.target.name]: e.target.value
         })
 
-        console.log(JSON.stringify(tema))
+        console.log(JSON.stringify(categoria))
     }
 
-    async function gerarNovoTema(e: ChangeEvent<HTMLFormElement>) {
+    async function gerarNovaCategoria(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
 
         if (id !== undefined) {
             try {
-                await atualizar(`/categorias`, tema, setTema, {
+                await atualizar(`/categorias`, categoria, setCategoria, {
                     headers: {
                         'Authorization': token
                     }
                 })
 
-                alert('Categoria atualizado com sucesso')
+                toastAlerta('Categoria atualizado com sucesso', 'sucesso')
                 retornar()
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O token expirou, favor logar novamente')
+                    toastAlerta('O token expirou, favor logar novamente', 'info')
                     handleLogout()
                 } else {
-                    alert('Erro ao atualizar o Categoria')
+                    toastAlerta('Erro ao atualizar o Categoria', 'error')
                 }
 
             }
 
         } else {
             try {
-                await cadastrar(`/categorias`, tema, setTema, {
+                await cadastrar(`/categorias`, categoria, setCategoria, {
                     headers: {
                         'Authorization': token
                     }
                 })
 
-                alert('Categoria cadastrado com sucesso')
+                toastAlerta('Categoria cadastrada com sucesso', 'sucesso')
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O token expirou, favor logar novamente')
+                    toastAlerta('O token expirou, favor logar novamente', 'info')
                     handleLogout()
                 } else {
-                    alert('Erro ao cadastrado o Categoria')
+                    toastAlerta('Erro ao cadastrado da Categoria', 'erro')
                 }
             }
         }
@@ -86,12 +87,12 @@ function FormularioTema() {
     }
 
     function retornar() {
-        navigate("/temas")
+        navigate("/categorias")
     }
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado');
+            toastAlerta('Você precisa estar logado', 'info');
             navigate('/login');
         }
     }, [token]);
@@ -99,18 +100,18 @@ function FormularioTema() {
     return (
         <div className="container flex flex-col items-center justify-center mx-auto">
             <h1 className="text-4xl text-center my-8">
-                {id === undefined ? 'Cadastre um novo tema' : 'Editar tema'}
+                {id === undefined ? 'Cadastre um nova categoria' : 'Editar categoria'}
             </h1>
 
-            <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoTema}>
+            <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="descricao">Descrição do tema</label>
+                    <label htmlFor="descricao">Descrição das categorias</label>
                     <input
                         type="text"
                         placeholder="Descrição"
                         name='descricao'
                         className="border-2 border-slate-700 rounded p-2"
-                        value={tema.descricao}
+                        value={categoria.descricao}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
@@ -125,4 +126,4 @@ function FormularioTema() {
     );
 }
 
-export default FormularioTema;
+export default FormularioCategoria;

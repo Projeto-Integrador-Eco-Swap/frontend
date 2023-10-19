@@ -2,8 +2,8 @@
 import React from 'react';
 import homeLogo from '../../assets/home.jpg'
 import './Home.css';
-import ListaPostagens from '../../components/produtos/listaProduto/ListaProduto';
-import ModalPostagem from '../../components/produtos/modalProduto/ModalProduto';
+import ListaProdutos from '../../components/produtos/listaProduto/ListaProduto';
+import ModalProduto from '../../components/produtos/modalProduto/ModalProduto';
 
 function Home() {
     return (
@@ -11,12 +11,12 @@ function Home() {
             <div className="bg-indigo-900 flex justify-center">
                 <div className='container grid grid-cols-2 text-white'>
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
-                        <h2 className='text-5xl font-bold'>Seja bem vinde!</h2>
+                        <h2 className='text-5xl font-bold'>Seja bem vindo(a)</h2>
                         <p className='text-xl'>Expresse aqui seus pensamentos e opniões</p>
 
                         <div className="flex justify-around gap-4">
-                            <ModalPostagem />
-                            <button className='rounded bg-white text-blue-800 py-2 px-4'>Ver postagens</button>
+                            <ModalProduto />
+                            <button className='rounded bg-white text-blue-800 py-2 px-4'>Ver produtos</button>
                         </div>
                     </div>
 
@@ -26,7 +26,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <ListaPostagens />
+            <ListaProdutos/>
         </>
     );
 }
