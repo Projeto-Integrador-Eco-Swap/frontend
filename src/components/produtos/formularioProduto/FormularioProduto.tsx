@@ -151,6 +151,30 @@ function FormularioProduto() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="foto">Foto do produto</label>
+          <input
+            value={produto.foto}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            type="text"
+            placeholder="Foto"
+            name="foto"
+            required
+            className="border-2 border-slate-700 rounded p-2"
+          />
+        </div>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="preco">Preço</label>
+          <input
+            value={produto.preco}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            type="number"
+            placeholder="Preço"
+            name="preco"
+            required
+            className="border-2 border-slate-700 rounded p-2"
+          />
+        </div>
 
         <div className="flex flex-col gap-2">
           <label htmlFor="descricao">Descrição do produto</label>
@@ -183,6 +207,7 @@ function FormularioProduto() {
             ))}
           </select>
         </div>
+           
         <button
           disabled={carregandoCategoria}
           type="submit"

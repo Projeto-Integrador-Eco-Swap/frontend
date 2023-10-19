@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Categoria from '../../../models/Categoria.ts';
 import { buscar } from '../../../services/Service';
-import CardCategorias from '../cardCategorias/CardCategoria.tsx';
+import CardCategoria from '../cardCategorias/CardCategoria.tsx'
 import { toastAlerta } from '../../../utils/toastAlert.tsx';
 
 function ListaCategorias() {
@@ -56,7 +56,7 @@ function ListaCategorias() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {categorias.map((categoria) => (
                             <>
-                                <CardCategorias key={categoria.id} categoria={categoria} />
+                                <CardCategoria key={categoria.id} categoria={categoria} />
                             </>
                         ))}
                     </div>

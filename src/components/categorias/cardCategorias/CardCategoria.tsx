@@ -21,5 +21,4 @@ function CardCategorias({categoria}: CardCategoriaProps) {
         </div>
     )
 }
-
 export default CardCategorias

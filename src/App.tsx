@@ -11,7 +11,7 @@ import Login from './paginas/login/Login';
 import Cadastro from './paginas/cadastro/Cadastro';
 import Home from './paginas/home/Home';
 import {AuthProvider} from './contexts/AuthContext';
-import ListaCategoria from './components/categorias/formularioCategoria/FormularioCategoria'
+import ListaCategoria from './components/categorias/listaCategorias/ListaCategoria.tsx'
 import FormularioCategoria from './components/categorias/formularioCategoria/FormularioCategoria'
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 import ListaProdutos from './components/produtos/listaProduto/ListaProduto.tsx';
