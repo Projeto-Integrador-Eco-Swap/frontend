@@ -8,7 +8,7 @@ import ModalProduto from '../../components/produtos/modalProduto/ModalProduto';
 function Home() {
     return (
         <>
-            <div className="bg-indigo-900 flex justify-center">
+            <div className="bg-green-900 flex justify-center">
                 <div className='container grid grid-cols-2 text-white'>
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
                         <h2 className='text-5xl font-bold'>Seja bem vindo(a)</h2>
@@ -16,7 +16,7 @@ function Home() {
 
                         <div className="flex justify-around gap-4">
                             <ModalProduto />
-                            <button className='rounded bg-white text-blue-800 py-2 px-4'>Ver produtos</button>
+                            <button className='rounded bg-black text-white py-2 px-4'>Ver produtos</button>
                         </div>
                     </div>
 

@@ -1,0 +1,18 @@
+/* styles/navbar.css */
+.navbar {
+    background-color: #f8f8f8; /* Verde */
+    color: #000000; /* Preto */
+  }
+  
+  .navbar a {
+    color: #02640a; /* Preto */
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.3s;
+    border: 1px solid transparent; /* Adicione uma borda transparente */
+  }
+  
+  #border {
+    text-decoration: underline;
+    border: 1px solid #07661b; /* Quando o mouse passar por cima, exibirá uma borda verde */
+  }
