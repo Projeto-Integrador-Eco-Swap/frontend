@@ -22,19 +22,17 @@ function Navbar() {
 
     if (usuario.token !== '') {
         navbarComponent = (
-            <div className='navbar w-full flex justify-center py-4'>
-                <div className="container flex justify-between text-lg">
+            <div className='navbar w-full py-4 flex bg-white items-center justify-between shadow-md'>
                 <Link to='/home' className='text-2xl font-bold uppercase'>
-                        <img src={logotipo} alt="Logotipo da sua empresa"  />
-                    </Link>
+                    <img src={logotipo} alt="Logotipo da sua empresa" className='w-50 ml-10' />
+                </Link>
 
-                    <div className='flex gap-4 border'>
-                        <Link to='/produtos' className='hover:underline'>Produtos</Link>
-                        <Link to='/categorias' className='hover:underline'>Categorias</Link>
-                        <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar categoria</Link>
-                        <Link to='/perfil' className='hover:underline'>Perfil</Link>
-                        <Link to='/sair' onClick={logout} className='hover:underline'>Sair</Link>
-                    </div>
+                <div className='flex gap-4 mr-10'>
+                    <Link to='/produtos' className='hover:border-b-2 hover:border-green-500 custom-link mr-4'>Produtos</Link>
+                    <Link to='/categorias' className='hover:border-b-2 hover:border-green-500 mr-4'>Categorias</Link>
+                    <Link to='/cadastroCategoria' className='hover:border-b-2 hover:border-green-500 mr-4'>Cadastrar categoria</Link>
+                    <Link to='/perfil' className='hover:border-b-2 hover:border-green-500 mr-4'>Perfil</Link>
+                    <Link to='/sair' onClick={logout} className='hover:border-b-2 hover:border-green-500 mr-4'>Sair</Link>
                 </div>
             </div>
         );
@@ -48,3 +46,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

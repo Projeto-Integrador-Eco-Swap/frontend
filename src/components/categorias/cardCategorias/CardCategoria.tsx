@@ -11,7 +11,7 @@ function CardCategorias({categoria}: CardCategoriaProps) {
             <header className='py-2 px-6 bg-green-800 text-white font-bold text-2xl'>Categoria</header>
             <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.descricao}</p>
             <div className="flex">
-                <Link to={`/editarCategoria/${categoria.id}`} className='w-full text-slate-100 bg-orange-500 hover:bg-orange-800 flex items-center justify-center py-2'>
+                <Link to={`/editarCategoria/${categoria.id}`} className='w-full text-slate-100 bg-green-500 hover:bg-green-800 flex items-center justify-center py-2'>
                     <button>Editar</button>
                 </Link>
                 <Link to={`/deletarCategoria/${categoria.id}`} className='text-slate-100 bg-red-500 hover:bg-red-700 w-full flex items-center justify-center'>

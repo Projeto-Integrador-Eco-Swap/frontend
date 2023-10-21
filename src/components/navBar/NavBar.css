@@ -1,18 +1,24 @@
 /* styles/navbar.css */
 .navbar {
-    background-color: #f8f8f8; /* Verde */
-    color: #000000; /* Preto */
+    background-color: #f8f8f8;
+    color: #000000;
   }
   
   .navbar a {
-    color: #02640a; /* Preto */
+    color: #02640a;
     text-decoration: none;
     padding: 0 10px;
     transition: 0.3s;
-    border: 1px solid transparent; /* Adicione uma borda transparente */
+    border: 1px solid transparent;
   }
   
-  #border {
-    text-decoration: underline;
-    border: 1px solid #07661b; /* Quando o mouse passar por cima, exibirá uma borda verde */
-  }
+.menu-link:hover {
+  border-bottom: 2px solid #02640a;
+  padding-bottom: 4px;
+}
+
+/* NavBar.css */
+.custom-link {
+  color: black; /* Define a cor preta para os links */
+  text-decoration: none; /* Remove sublinhado padrão */
+}
