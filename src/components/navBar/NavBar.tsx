@@ -1,4 +1,3 @@
-// @ts-ignore
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
@@ -22,15 +21,15 @@ function Navbar() {
 
     if (usuario.token !== '') {
         navbarComponent = (
-            <div className='navbar w-full py-4 flex bg-white items-center justify-between shadow-md'>
-                <Link to='/home' className='text-2xl font-bold uppercase'>
+            <div className='navbar w-full py-5 flex bg-white items-center justify-between shadow-md' >
+                <Link to='/home' className='text-1x1 font-bold uppercase'>
                     <img src={logotipo} alt="Logotipo da sua empresa" className='w-50 ml-10' />
                 </Link>
 
                 <div className='flex gap-4 mr-10'>
                     <Link to='/produtos' className='hover:border-b-2 hover:border-green-500 custom-link mr-4'>Produtos</Link>
                     <Link to='/categorias' className='hover:border-b-2 hover:border-green-500 mr-4'>Categorias</Link>
-                    <Link to='/cadastroCategoria' className='hover:border-b-2 hover:border-green-500 mr-4'>Cadastrar categoria</Link>
+                    <Link to='/cadastroCategoria' className='hover:border-b-2 hover.border-green-500 mr-4'>Cadastrar categoria</Link>
                     <Link to='/perfil' className='hover:border-b-2 hover:border-green-500 mr-4'>Perfil</Link>
                     <Link to='/sair' onClick={logout} className='hover:border-b-2 hover:border-green-500 mr-4'>Sair</Link>
                 </div>
@@ -46,4 +45,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

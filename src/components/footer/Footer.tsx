@@ -12,7 +12,7 @@ function Footer() {
         <>
             {showFooter && (
                 <div className="flex justify-center bg-green-900 text-white">
-                    <div className="container flex flex-col items-center py-4">
+                    <div className="container flex flex-col items-center py-5">
                         <p className='text-xl font-bold'>Eco Swap | Copyright: {data}</p>
                         <p className='text-lg'>Acesse nossas redes sociais</p>
                         <div className='flex gap-2'>
