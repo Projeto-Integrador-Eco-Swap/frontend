@@ -21,6 +21,9 @@ import ListaProdutos from './components/produtos/listaProduto/ListaProduto.tsx';
 import FormularioProduto from './components/produtos/formularioProduto/FormularioProduto.tsx';
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
 import Perfil from "./paginas/perfil/Perfil.tsx";
+import Sobre from './paginas/sobre/Sobre.tsx';
+
+
 
 function App() {
     return (
@@ -44,7 +47,7 @@ function App() {
                             <Route path="/editarProduto/:id" element={<FormularioProduto/>}/>
                             <Route path="/deletarProduto/:id" element={<DeletarProduto/>}/>
                             <Route path="/perfil" element={<Perfil/>}/>
-
+                            <Route path="/sobre" element={<Sobre />} />
                         </Routes>
                     </div>
                     <Footer/>

@@ -32,6 +32,7 @@ function Navbar() {
                     <Link to='/cadastroCategoria' className='hover:border-b-2 hover:border-green-600 custom-link mr-4'>Cadastrar categoria</Link>
                     <Link to='/perfil' className='hover:border-b-2 hover:border-green-600 custom-link mr-4'>Perfil</Link>
                     <Link to='' onClick={logout} className='hover:border-b-2 hover:border-green-600 custom-link mr-4'>Sair</Link>
+                    <Link to='/sobre' className='hover:border-b-2 hover:border-green-600 custom-link mr-4'>Sobre</Link>
                 </div>
             </div>
         );
