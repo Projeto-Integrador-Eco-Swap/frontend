@@ -197,7 +197,7 @@ function FormularioProduto() {
             className="border p-2 border-slate-800 rounded"
             onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}
           >
-            <option value="" disabled>
+            <option value="" selected disabled>
               Selecione uma categoria
             </option>
             {categorias.map((categoria) => (
