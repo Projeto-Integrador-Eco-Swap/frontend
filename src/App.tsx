@@ -4,8 +4,11 @@
 import React from 'react';
 import './App.css';
 
+import 'react-toastify/dist/ReactToastify.css';
+
 import Navbar from './components/navBar/NavBar';
 import Footer from './components/footer/Footer';
+import { ToastContainer } from 'react-toastify';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Login from './paginas/login/Login';
 import Cadastro from './paginas/cadastro/Cadastro';
@@ -23,6 +26,7 @@ function App() {
     return (
         <>
             <AuthProvider>
+            <ToastContainer />
                 <BrowserRouter>
                     <Navbar/>
                     <div className='min-h-[80vh]'>

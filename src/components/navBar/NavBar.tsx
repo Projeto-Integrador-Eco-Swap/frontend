@@ -27,11 +27,11 @@ function Navbar() {
                 </Link>
 
                 <div className='flex gap-4 mr-10'>
-                    <Link to='/produtos' className='hover:border-b-2 hover:border-green-500 custom-link mr-4'>Produtos</Link>
-                    <Link to='/categorias' className='hover:border-b-2 hover:border-green-500 mr-4'>Categorias</Link>
-                    <Link to='/cadastroCategoria' className='hover:border-b-2 hover.border-green-500 mr-4'>Cadastrar categoria</Link>
-                    <Link to='/perfil' className='hover:border-b-2 hover:border-green-500 mr-4'>Perfil</Link>
-                    <Link to='/sair' onClick={logout} className='hover:border-b-2 hover:border-green-500 mr-4'>Sair</Link>
+                    <Link to='/produtos' className='hover:border-b-2 hover:border-green-600 custom-link mr-4'>Produtos</Link>
+                    <Link to='/categorias' className='hover:border-b-2 hover:border-green-600 custom-link mr-4'>Categorias</Link>
+                    <Link to='/cadastroCategoria' className='hover:border-b-2 hover:border-green-600 custom-link mr-4'>Cadastrar categoria</Link>
+                    <Link to='/perfil' className='hover:border-b-2 hover:border-green-600 custom-link mr-4'>Perfil</Link>
+                    <Link to='' onClick={logout} className='hover:border-b-2 hover:border-green-600 custom-link mr-4'>Sair</Link>
                 </div>
             </div>
         );
