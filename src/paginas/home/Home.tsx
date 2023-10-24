@@ -5,7 +5,6 @@ import './Home.css';
 import ListaProdutos from '../../components/produtos/listaProduto/ListaProduto';
 import ModalProduto from '../../components/produtos/modalProduto/ModalProduto';
 import homeImg from '../../assets/homeImg.png'
-import homeImg2 from '../../assets/homeImg2.jpg'
 
 function Home() {
     const navigate = useNavigate(); // Obtenha a função de navegação
@@ -36,10 +35,6 @@ function Home() {
                 </div>
             </div>
             <ListaProdutos/>
-
-            <div className="flex justify-center">
-                <img src={homeImg2} alt="" />
-            </div>
         </>
     );
 }
