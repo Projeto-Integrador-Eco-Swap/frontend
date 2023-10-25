@@ -3,7 +3,19 @@
     background-color: #f8f8f8;
     color: #000000;
   }
-  
+
+.logotipo {
+  margin-left: 40vh;
+  font-size: 20px;
+}
+
+.mobile {
+  margin-left: 10vh;
+  height: 100%;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
   .navbar a {
     color: #02640a;
     text-decoration: none;
