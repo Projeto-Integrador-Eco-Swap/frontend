@@ -23,10 +23,6 @@ import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto'
 import Perfil from "./paginas/perfil/Perfil.tsx";
 import Sobre from './paginas/sobre/Sobre.tsx';
 
-
-
-
-
 function App() {
     return (
         <>

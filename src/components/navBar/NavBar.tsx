@@ -89,11 +89,13 @@ function Navbar() {
               <Link to={`${nav.id}`}>{nav.title}</Link>
             </li>
           ))}
-          <img src={usuario.foto !== '' ? usuario.foto : 'https://i.imgur.com/C2fYDPo.png'} alt={`Foto de perfil de ${usuario.nome}`} className='rounded-full w-12  border-8 border-white' />
+          <img src={usuario.foto !== '' ? usuario.foto : 
+          'https://i.imgur.com/C2fYDPo.png'} alt={`Foto de perfil de ${usuario.nome}`}
+           className='rounded-full w-12  border-8 border-white' />
         </ul>
 
         {/* Mobile Navigation */}
-        <div className="sm:hidden bg-white mt-5 mr-10 flex flex-1 mobile justify-end items-center ml-4">
+        <div className="sm:hidden bg-white mr-5 flex flex-1 mobile justify-end items-center ml-4">
           {toggle ? (
 
             // Exibe a imagem de fechar quando o menu está aberto
@@ -119,12 +121,12 @@ function Navbar() {
               !toggle ? "hidden" : "block"
             } absolute top-20 right-0 h-screen w-screen bg-black-gradient rounded-xl sidebar`}
           >
-            <ul className="h-screen list-none bg-white flex justify-start items-start flex-1 flex-col mt-8">
-              <img src={usuario.foto !== '' ? usuario.foto : 'https://i.imgur.com/C2fYDPo.png'} alt={`Foto de perfil de ${usuario.nome}`} className='rounded-full border-8 border-white' />
+            <ul className="h-[1500px] mt-10 items-center list-none bg-white flex justify-start items-start flex-1 flex-col mt-4">
+              <img src={usuario.foto !== '' ? usuario.foto : 'https://i.imgur.com/C2fYDPo.png'} alt={`Foto de perfil de ${usuario.nome}`} className='rounded-full border-8 border-white mt-10 mb-6 h-[125px] w-[125px]' />
               {navLinks.map((nav, index) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  className={`font-poppins font-medium cursor-pointer aling-center text-[20px] ${
                     active === nav.title ? "text-white" : "text-dimWhite"
                   } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                   onClick={() => {

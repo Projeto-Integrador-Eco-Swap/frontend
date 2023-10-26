@@ -15,7 +15,6 @@ function Home() {
                     </div>
                 </div>
             <ListaProdutos />
-            <div className='linha'></div>
             <img src={banner} className='' alt="" />
         </>
     );
