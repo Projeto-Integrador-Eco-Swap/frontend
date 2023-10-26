@@ -91,7 +91,7 @@ function Navbar() {
           ))}
           <img src={usuario.foto !== '' ? usuario.foto : 
           'https://i.imgur.com/C2fYDPo.png'} alt={`Foto de perfil de ${usuario.nome}`}
-           className='rounded-full w-12  border-8 border-white' />
+           className='rounded-full w-14 h-14 border-8 border-white' />
         </ul>
 
         {/* Mobile Navigation */}
