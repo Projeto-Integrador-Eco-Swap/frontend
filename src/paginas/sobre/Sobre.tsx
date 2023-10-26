@@ -100,7 +100,7 @@ function Sobre() {
                 </div>
                 <div className="mt-10 flex justify-center mb-12">
                   <div className='flex-col justify-center items-center'>
-                    <h3 className="text-xl text-center text-black font-bold dark:text-verde_claro2 mb-2 hover:text-verde_claro1 hover:dark:text-verde_claro2 transition-all duration-300 ease-in-out">
+                    <h3 className="text-xl text-center text-black font-bold dark:text-verde_claro2 hover:text-verde_claro1 hover:dark:text-verde_claro2 transition-all duration-300 ease-in-out">
                     <a href={dev.href}>
                         <span aria-hidden="true" className="" />
                         {dev.name}

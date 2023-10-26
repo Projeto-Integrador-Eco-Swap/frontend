@@ -59,23 +59,23 @@ function Navbar() {
 
   if (usuario.token !== '') {
     navbarComponent = (
-      <nav className="w-full flex py-6 justify-between items-center navbar">
+      <nav className="w-full bg-white flex my-5 justify-between items-center">
         {/* Logo */}
         <div>
-          <Link to="/home" className="text-3xl text-green flex mobile items-center cursor-pointer">
-            <img src={logotipo} alt="Logo" className="w-12" />
-            <p className="mt-7">Eco Swap</p>
+          <Link to="/home" className="text-3xl bg-white text-green flex margin-left items-center cursor-pointer">
+            <img src={logotipo} alt="Logo" className="w-9 mb-3" />
+            <p className="my-auto ml-2 texto ">Eco Swap</p>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+        <ul className="list-none sm:flex hidden justify-end items-center flex-1 navbar bg-white">
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
               className={`font-poppins font-normal cursor-pointer text-[16px] ${
                 active === nav.title ? "text-white" : "text-dimWhite"
-              } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+              } ${index === navLinks.length - 1 ? "mr-5" : "mr-2"}`}
               onClick={() => {
                 setActive(nav.title);
                 if (nav.id === 'sair') {
@@ -86,33 +86,41 @@ function Navbar() {
                 toggleDropdown();
               }}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <Link to={`${nav.id}`}>{nav.title}</Link>
             </li>
           ))}
+          <img src={usuario.foto !== '' ? usuario.foto : 'https://i.imgur.com/C2fYDPo.png'} alt={`Foto de perfil de ${usuario.nome}`} className='rounded-full w-12  border-8 border-white' />
         </ul>
 
         {/* Mobile Navigation */}
-        <div className="sm:hidden mt-5 mr-10 flex flex-1 mobile justify-end items-center ml-4">
-          <img
-            src={menu}
-            alt="menu"
-            className="w-7 h-7 object-contain"
-            onClick={toggleDropdown}
-          />
-          {/* Dropdown Menu */}
-          <div
-            className={`${
-                !toggle ? "hidden" : "block"
-            } absolute top-0 right-0 h-screen w-screen bg-black-gradient rounded-xl sidebar`}
->               
-            <h1>Menu</h1>
+        <div className="sm:hidden bg-white mt-5 mr-10 flex flex-1 mobile justify-end items-center ml-4">
+          {toggle ? (
+
+            // Exibe a imagem de fechar quando o menu está aberto
             <img
               src={fechar}
               alt="fechar"
               className="w-7 h-7 object-contain"
               onClick={toggleDropdown}
             />
-            <ul className="h-screen list-none bg-white flex justify-start items-start flex-1 flex-col">
+          ) : (
+
+            // Exibe o ícone do menu (hambúrguer) quando o menu está fechado
+            <img
+              src={menu}
+              alt="menu"
+              className="w-7 h-7 object-contain"
+              onClick={toggleDropdown}
+            />
+          )}
+          {/* Dropdown Menu */}
+          <div
+            className={`${
+              !toggle ? "hidden" : "block"
+            } absolute top-20 right-0 h-screen w-screen bg-black-gradient rounded-xl sidebar`}
+          >
+            <ul className="h-screen list-none bg-white flex justify-start items-start flex-1 flex-col mt-8">
+              <img src={usuario.foto !== '' ? usuario.foto : 'https://i.imgur.com/C2fYDPo.png'} alt={`Foto de perfil de ${usuario.nome}`} className='rounded-full border-8 border-white' />
               {navLinks.map((nav, index) => (
                 <li
                   key={nav.id}
@@ -129,7 +137,7 @@ function Navbar() {
                     toggleDropdown();
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <Link to={`${nav.id}`}>{nav.title}</Link>
                 </li>
               ))}
             </ul>

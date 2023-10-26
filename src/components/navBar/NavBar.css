@@ -9,11 +9,12 @@
   font-size: 20px;
 }
 
-.mobile {
+.texto {
+  color: #02640a;;
+}
+
+.margin-left {
   margin-left: 10vh;
-  height: 100%;
-  width: 100%;
-  background-color: #f8f8f8;
 }
 
   .navbar a {

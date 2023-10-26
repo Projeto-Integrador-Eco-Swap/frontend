@@ -9,3 +9,15 @@
     display: block;
     margin: 0 auto;
 }
+
+.linha {
+    width: 100vw;
+    height: 20vh;
+    background-color: #ffffff;
+}
+
+.banner {
+    background-image: url('../../assets/banner.png');
+    min-height: 80vh;
+    background-size: cover;
+}
